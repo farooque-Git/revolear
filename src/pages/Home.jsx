@@ -1,12 +1,12 @@
 import React from "react";
 import HeroSection from "./../components/home/HeroSection";
-import FeaturesSection from "../components/home/FeatureSection";
+import MainSection from "./../components/home/MainSection";
 
 const Home = () => {
   return (
     <div>
       <HeroSection />
-      <FeaturesSection />
+      <MainSection />
     </div>
   );
 };

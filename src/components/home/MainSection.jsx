@@ -1,16 +1,16 @@
 import React from "react";
 import basketballplayer from "../../assets/basketballplayer.png";
-import featurebg from "../../assets/featurebg.png";
+import featurebg1 from "../../assets/featurebg1.png";
 import LoginBtn from "../button/LoginBtn";
 
-const FeaturesSection = () => {
+const MainSection = () => {
   return (
     <section className="bg-gray-900 text-white  px-10 py-16 space-y-16">
       {/* Block 1: Secure */}
       <div className="relative  rounded-xl overflow-hidden shadow-lg">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${featurebg})` }}
+          style={{ backgroundImage: `url(${featurebg1})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-br h-86 opacity-80" />
         <div className="relative p-10 text-white">
@@ -93,4 +93,4 @@ const FeaturesSection = () => {
   );
 };
 
-export default FeaturesSection;
+export default MainSection;
