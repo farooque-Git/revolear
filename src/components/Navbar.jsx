@@ -1,59 +1,39 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Signup from "./button/Signup";
+import { FiMenu, FiSearch } from "react-icons/fi";
+import { IoMdNotifications } from "react-icons/io";
 import logo from "../assets/logo.png";
 
-export default function Navbar() {
+const Navbar = ({ onToggleSidebar }) => {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-10 py-6 bg-transparent text-white">
-      {/* Logo Section */}
-      <div className="text-xl font-bold flex items-center gap-2">
-        <Link to="/">
-          <img
-            src={logo}
-            alt="DreamCourt Logo"
-            className="object-contain w-[376px] h-[59px]"
-          />
-        </Link>
+    <div className="flex items-center justify-between px-4 py-4 bg-[#F9F8F8] shadow-md">
+      {/* Left Section */}
+      <div className="flex items-center gap-4">
+        <button onClick={onToggleSidebar} className="text-2xl">
+          <FiMenu />
+        </button>
+        <img src={logo} alt="Revolear" className="h-8 w-8" />
+        <span className="font-semibold text-lg text-black">Revolear</span>
       </div>
 
-      {/* Navigation Links */}
-      <ul className="hidden md:flex gap-6 text-sm">
-        <li className="font-semibold border-white cursor-pointer">
-          <Link to="/" className="transition-colors hover:text-purple-400">
-            Home
-          </Link>
-        </li>
-        <li className="cursor-pointer">
-          <Link
-            to="/features"
-            className="transition-colors hover:text-purple-400"
-          >
-            Features
-          </Link>
-        </li>
-        <li className="cursor-pointer">
-          <Link to="/team" className="transition-colors hover:text-purple-400">
-            Team Management
-          </Link>
-        </li>
-        <li className="cursor-pointer">
-          <Link to="/about" className="transition-colors hover:text-purple-400">
-            About Us
-          </Link>
-        </li>
-        <li className="cursor-pointer">
-          <Link
-            to="/contact"
-            className="transition-colors hover:text-purple-400"
-          >
-            Contact
-          </Link>
-        </li>
-      </ul>
+      {/* Center Search Bar */}
+      <div className="w-[328px] mx-8">
+        <input
+          type="text"
+          placeholder="Buscar"
+          className="w-full max-w-xl px-4 py-2 rounded-full bg-[#C8E6E6] text-black placeholder:text-gray-700"
+        />
+      </div>
 
-      {/* CTA Button */}
-      <Signup />
-    </nav>
+      {/* Right Icons */}
+      <div className="flex items-center gap-6">
+        <FiSearch className="text-xl text-black cursor-pointer" />
+        <div className="relative">
+          <IoMdNotifications className="text-2xl text-yellow-400 cursor-pointer" />
+          <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full" />
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default Navbar;

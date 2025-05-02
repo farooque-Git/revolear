@@ -1,25 +1,33 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/Home";
+
 import Navbar from "./components/Navbar";
-import About from "./pages/About";
-import Feature from "./pages/Feature";
-import Contact from "./pages/Contact";
-import Footer from "./pages/Footer";
+import Sidebar from "./components/Sidebar";
+
+import { useState } from "react";
+import Home from "./components/Home";
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const handleSidebarClose = () => {
+    setSidebarOpen(false); // Close the sidebar
+  };
+
   return (
     <Router>
-      <Navbar />
+      <Navbar onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
+      {sidebarOpen && <Sidebar onClose={handleSidebarClose} />}{" "}
+      {/* Pass the onClose prop */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/features" element={<Feature />} />
-        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/about" element={<About />} /> */}
+        {/* <Route path="/features" element={<Feature />} /> */}
+        {/* <Route path="/contact" element={<Contact />} /> */}
 
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }
