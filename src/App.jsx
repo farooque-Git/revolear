@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Feature from "./pages/Feature";
 import Contact from "./pages/Contact";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
+      <Footer />
     </Router>
   );
 }
