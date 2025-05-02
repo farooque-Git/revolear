@@ -8,7 +8,10 @@ const Navbar = ({ onToggleSidebar }) => {
     <div className="flex items-center justify-between px-4 py-4 bg-[#F9F8F8] shadow-md">
       {/* Left Section */}
       <div className="flex items-center gap-4">
-        <button onClick={onToggleSidebar} className="text-2xl">
+        <button
+          onClick={onToggleSidebar}
+          className="text-2xl md:hidden" // Hide the menu icon on larger screens
+        >
           <FiMenu />
         </button>
         <img src={logo} alt="Revolear" className="h-8 w-8" />
@@ -16,7 +19,7 @@ const Navbar = ({ onToggleSidebar }) => {
       </div>
 
       {/* Center Search Bar */}
-      <div className="w-[328px] mx-8">
+      <div className="hidden md:block w-[328px] mx-8">
         <input
           type="text"
           placeholder="Buscar"
