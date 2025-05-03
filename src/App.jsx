@@ -8,6 +8,7 @@ import { useState } from "react";
 import Home from "./components/Home";
 import Footer from "./pages/Footer";
 import Aboutus from "./pages/Aboutus";
+import Features from "./pages/Features";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -24,7 +25,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Aboutus />} />
-        {/* <Route path="/features" element={<Feature />} /> */}
+        <Route path="/features" element={<Features />} />
         {/* <Route path="/contact" element={<Contact />} /> */}
 
         {/* <Route path="*" element={<NotFound />} /> */}

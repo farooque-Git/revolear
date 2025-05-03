@@ -76,13 +76,13 @@ const TeamSection = () => {
         Conozca a las mentes apasionadas que hay detrás de REVOLEAR®.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-8">
         {teamMembers.map((member, index) => (
           <div key={index} className=" shadow-md rounded-lg overflow-hidden">
             <img
               src={member.image}
               alt={member.name}
-              className="w-[298px] h-[329px] object-cover"
+              className="w-full h-[329px] object-cover"
             />
             <div className="p-4 text-center bg-gradient-to-b from-gray-100 to-gray-400">
               <h3 className="text-lg font-semibold">{member.name}</h3>
