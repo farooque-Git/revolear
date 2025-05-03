@@ -1,6 +1,6 @@
 import React from "react";
 import AboutSecondSec from "../components/about/AboutSecondSec";
-import AboutMainSec from "../components/about/aboutmainsec";
+import AboutMainSec from "../components/about/AboutMainSec";
 import AboutThird from "../components/about/AboutThird";
 import TeamSection from "../components/about/TeamSection";
 import AboutForth from "../components/about/AboutForth";
