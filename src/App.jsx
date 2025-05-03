@@ -7,6 +7,7 @@ import Sidebar from "./components/Sidebar";
 import { useState } from "react";
 import Home from "./components/Home";
 import Footer from "./pages/Footer";
+import Aboutus from "./pages/Aboutus";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -22,7 +23,7 @@ function App() {
       {/* Pass the onClose prop */}
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/about" element={<About />} /> */}
+        <Route path="/about" element={<Aboutus />} />
         {/* <Route path="/features" element={<Feature />} /> */}
         {/* <Route path="/contact" element={<Contact />} /> */}
 

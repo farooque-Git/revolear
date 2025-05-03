@@ -10,28 +10,34 @@ import {
   FiX, // Close icon
 } from "react-icons/fi";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Sidebar = ({ onClose }) => {
   const sidebarSections = [
     {
       items: [
-        { icon: <FiHome />, label: "Página de inicio" },
-        { icon: <FiSettings />, label: "Características" },
-        { icon: <FiEdit />, label: "Blog", subLabel: "Publicación de blog" },
-        { icon: <FiTag />, label: "Productos" },
-        { icon: <FiFolder />, label: "Precios" },
-        { icon: <FiFileText />, label: "Proyectos" },
-        { icon: <FiFileText />, label: "Mis publicaciones" },
-        { icon: <FiInfo />, label: "Sobre nosotros" },
+        { icon: <FiHome />, label: "Página de inicio", to: "/" },
+        { icon: <FiSettings />, label: "Características", to: "/features" },
+        {
+          icon: <FiEdit />,
+          label: "Blog",
+          subLabel: "Publicación de blog",
+          to: "/blog",
+        },
+        { icon: <FiTag />, label: "Productos", to: "/products" },
+        { icon: <FiFolder />, label: "Precios", to: "/pricing" },
+        { icon: <FiFileText />, label: "Proyectos", to: "/projects" },
+        { icon: <FiFileText />, label: "Mis publicaciones", to: "/posts" },
+        { icon: <FiInfo />, label: "Sobre nosotros", to: "/about" },
       ],
     },
     {
       items: [
-        { label: "Notificaciones" },
-        { label: "Contacta con nosotros" },
-        { label: "Perfil y configuración" },
-        { label: "Contratos P2P" },
-        { label: "Cerrar sesión", isBold: true },
+        { label: "Notificaciones", to: "/notifications" },
+        { label: "Contacta con nosotros", to: "/contact" },
+        { label: "Perfil y configuración", to: "/profile" },
+        { label: "Contratos P2P", to: "/contracts" },
+        { label: "Cerrar sesión", isBold: true, to: "/logout" },
       ],
     },
   ];
@@ -55,19 +61,21 @@ const Sidebar = ({ onClose }) => {
         >
           <ul className="space-y-4">
             {section.items.map((item, idx) => (
-              <li
-                key={idx}
-                className="flex items-center gap-3 text-sm cursor-pointer"
-              >
-                {item.icon && <span className="text-lg">{item.icon}</span>}
-                <span className={`${item.isBold ? "font-bold" : ""}`}>
-                  {item.label}
-                </span>
-                {item.subLabel && (
-                  <span className="ml-auto text-xs bg-white border px-2 py-1 rounded shadow">
-                    {item.subLabel}
+              <li key={idx}>
+                <Link
+                  to={item.to || "#"}
+                  className="flex items-center gap-3 text-sm cursor-pointer hover:text-black text-gray-700"
+                >
+                  {item.icon && <span className="text-lg">{item.icon}</span>}
+                  <span className={`${item.isBold ? "font-bold" : ""}`}>
+                    {item.label}
                   </span>
-                )}
+                  {item.subLabel && (
+                    <span className="ml-auto text-xs bg-white border px-2 py-1 rounded shadow">
+                      {item.subLabel}
+                    </span>
+                  )}
+                </Link>
               </li>
             ))}
           </ul>
