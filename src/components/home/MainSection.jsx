@@ -2,6 +2,8 @@ import React from "react";
 import arrow from "../../assets/arrow.png";
 import { useNavigate } from "react-router-dom";
 import home1 from "../../assets/home1.png";
+import { GradientButton } from "../button/Button";
+import { GradientOutlineButton } from "./../button/Button";
 
 const MainSection = () => {
   const navigate = useNavigate(); // Initialize navigate
@@ -49,12 +51,10 @@ const MainSection = () => {
           </p>
 
           <div className="flex gap-4">
-            <button className="px-6 py-3 bg-blue-500 text-white rounded-md text-lg">
-              Button 1
-            </button>
-            <button className="px-6 py-3 bg-green-500 text-white rounded-md text-lg">
-              Button 2
-            </button>
+            <GradientButton>Comenzar</GradientButton>
+            <GradientOutlineButton className="rounded-full">
+              Más información
+            </GradientOutlineButton>
           </div>
         </div>
       </div>

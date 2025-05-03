@@ -1,6 +1,7 @@
 import React from "react";
 import home4 from "../../assets/home4.png";
 import home5 from "../../assets/home5.png";
+import { GradientOutlineButton } from "../button/Button";
 
 const ForthMainScreeen = () => {
   return (
@@ -81,9 +82,9 @@ const ForthMainScreeen = () => {
 
           {/* Action Buttons */}
           <div className="mt-8 flex flex-wrap gap-4">
-            <button className="border border-pink-500 text-pink-600 px-5 py-2 rounded-full text-sm hover:bg-pink-50">
+            <GradientOutlineButton className="border border-pink-500 text-pink-600 px-5 py-2 rounded-full text-sm hover:bg-pink-50">
               Más Información
-            </button>
+            </GradientOutlineButton>
             <button className="text-sm text-gray-700 hover:underline">
               Registrarse
             </button>
@@ -145,9 +146,9 @@ const ForthMainScreeen = () => {
 
               {/* Action Buttons */}
               <div className="mt-8 flex flex-wrap gap-4">
-                <button className="border border-pink-500 text-pink-600 px-5 py-2 rounded-full text-sm hover:bg-pink-50">
+                <GradientOutlineButton className="border border-pink-500 text-pink-600 px-5 py-2 rounded-full text-sm hover:bg-pink-50">
                   Más Información
-                </button>
+                </GradientOutlineButton>
                 <button className="text-sm text-gray-700 hover:underline">
                   Registrarse
                 </button>

@@ -1,5 +1,6 @@
 import React from "react";
 import home3 from "../../assets/home3.png";
+import { GradientOutlineButton } from "../button/Button";
 
 const ThirdMainScreen = () => {
   return (
@@ -63,9 +64,9 @@ const ThirdMainScreen = () => {
           </div>
           <div className="flex gap-4">
             {" "}
-            <button className="px-4 py-2 border border-pink-500 text-pink-500 rounded-full hover:bg-pink-50 transition text-sm">
+            <GradientOutlineButton className="px-4 py-2 border border-pink-500 text-pink-500 rounded-full hover:bg-pink-50 transition text-sm">
               Más Información
-            </button>
+            </GradientOutlineButton>
             <button className="text-sm underline hover:text-black">
               Registrarse
             </button>

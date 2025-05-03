@@ -1,5 +1,6 @@
 import React from "react";
 import home2 from "../../assets/home2.png";
+import { GradientButton } from "../button/Button";
 
 const SecondMainScreen = () => {
   return (
@@ -23,9 +24,9 @@ const SecondMainScreen = () => {
 
             {/* Buttons */}
             <div className="flex gap-4 mt-6">
-              <button className="px-6 py-2 border border-pink-500 rounded-full text-pink-500 font-medium hover:bg-pink-50 transition">
+              <GradientButton className="px-6 py-2 border border-pink-500 rounded-full text-pink-500 font-medium hover:bg-pink-50 transition">
                 Más información
-              </button>
+              </GradientButton>
               <button className="px-6 py-2 rounded-full font-medium text-black hover:underline transition">
                 Compra ahora &gt;
               </button>

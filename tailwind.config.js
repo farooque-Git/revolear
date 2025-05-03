@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primaryGradientStart: "#E37FDE", // purple-500
-        primaryGradientEnd: "#7E87F1", // blue-300
+        primaryGradientStart: "#FB658D", // purple-500
+        primaryGradientEnd: "#439999", // blue-300
       },
     },
   },

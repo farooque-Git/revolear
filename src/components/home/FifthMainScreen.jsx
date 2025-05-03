@@ -5,6 +5,7 @@ import home7 from "../../assets/home7.png";
 import card1 from "../../assets/card1.png";
 import card2 from "../../assets/card2.png";
 import card3 from "../../assets/card3.png";
+import { GradientButton, GradientOutlineButton } from "./../button/Button";
 
 const FifthMainScreen = () => {
   const cards = [
@@ -52,9 +53,9 @@ const FifthMainScreen = () => {
                   className="h-48 w-full object-cover rounded-lg mb-4"
                 />
                 <p className="text-sm text-gray-800 mb-4">{card.text}</p>
-                <button className="text-sm border border-purple-600 text-purple-700 px-4 py-1.5 rounded-full hover:bg-purple-50 transition">
+                <GradientOutlineButton className="text-sm border border-purple-600 text-purple-700 px-4 py-1.5 rounded-full hover:bg-purple-50 transition">
                   {card.button} →
-                </button>
+                </GradientOutlineButton>
               </div>
             ))}
           </div>
@@ -140,12 +141,8 @@ const FifthMainScreen = () => {
               aplicación. Descárguela ahora para empezar.
             </p>
             <div className="mt-4 flex flex-wrap gap-2 justify-center sm:justify-start">
-              <button className="bg-pink-500 text-white px-4 py-1 rounded">
-                Comenzar
-              </button>
-              <button className="bg-white text-gray-800 px-4 py-1 rounded">
-                Más información
-              </button>
+              <GradientButton>Comenzar</GradientButton>
+              <GradientOutlineButton>Más información</GradientOutlineButton>
             </div>
           </div>
         </div>
