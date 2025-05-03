@@ -63,43 +63,50 @@ const FifthMainScreen = () => {
 
       {/* Block 6 - Metrics */}
       <div className="bg-white min-h-screen w-full px-4 sm:px-8 py-8 mx-auto font-sans text-gray-900">
-        <h2 className="text-3xl sm:text-4xl font-bold leading-tight">
-          Métricas clave del <br />
-          rendimiento de nuestra <br />
-          aplicación
-        </h2>
-        <p className="mt-4 text-base leading-relaxed">
-          Nuestra aplicación ha experimentado un <br />
-          notable crecimiento desde su lanzamiento. <br />
-          Con miles de transacciones realizadas, la <br />
-          satisfacción de los usuarios sigue siendo alta.
-        </p>
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div>
-            <p className="text-2xl font-semibold">85%</p>
-            <p className="text-sm text-gray-600">
-              Índice de satisfacción de los <br />
-              usuarios basado en <br />
-              encuestas recientes.
-            </p>
+        <div className="flex items-center justify-between gap-6">
+          {/* Left side - Image */}
+          <div className="w-1/2">
+            <img
+              src={home6}
+              alt="Descripción de la imagen"
+              className="w-full "
+            />
           </div>
-          <div>
-            <p className="text-2xl font-semibold">10M</p>
-            <p className="text-sm text-gray-600">
-              Total de transacciones <br />
-              procesadas a través de nuestra <br />
-              plataforma.
+
+          {/* Right side - Content */}
+          <div className="w-1/2">
+            <h2 className="text-3xl sm:text-4xl font-bold leading-tight">
+              Métricas clave del <br />
+              rendimiento de nuestra <br />
+              aplicación
+            </h2>
+            <p className="mt-4 text-base leading-relaxed">
+              Nuestra aplicación ha experimentado un <br />
+              notable crecimiento desde su lanzamiento. <br />
+              Con miles de transacciones realizadas, la <br />
+              satisfacción de los usuarios sigue siendo alta.
             </p>
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <p className="text-2xl font-semibold">85%</p>
+                <p className="text-sm text-gray-600">
+                  Índice de satisfacción de los <br />
+                  usuarios basado en <br />
+                  encuestas recientes.
+                </p>
+              </div>
+              <div>
+                <p className="text-2xl font-semibold">10M</p>
+                <p className="text-sm text-gray-600">
+                  Total de transacciones <br />
+                  procesadas a través de nuestra <br />
+                  plataforma.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Block 7 - Image */}
-      <img
-        src={home6}
-        alt="Descripción de la imagen"
-        className="w-full rounded-lg"
-      />
 
       {/* Block 8 - Review & CTA */}
       <div className="min-h-screen bg-white flex flex-col justify-between font-sans text-black">

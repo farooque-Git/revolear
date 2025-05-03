@@ -5,32 +5,25 @@ import logo from "../assets/logo.png";
 
 const Navbar = ({ onToggleSidebar }) => {
   return (
-    <div className="flex items-center justify-between px-4 py-4 bg-[#F9F8F8] shadow-md">
-      {/* Left Section */}
-      <div className="flex items-center gap-4">
-        <button onClick={onToggleSidebar} className="text-2xl">
-          <FiMenu />
-        </button>
-        <img src={logo} alt="Revolear" className="h-8 w-8" />
-        <span className="font-semibold text-lg text-black">Revolear</span>
+    <div className="flex items-center justify-between px-6 py-4 bg-[#F9F8F8] shadow-md w-full">
+      {/* Left Section - Logo and Title */}
+      <div className="flex items-center gap-3">
+        <img src={logo} alt="Revolear" className="h-8 w-8 cursor-pointer" />
+        <span className="font-semibold text-lg text-black cursor-pointer">
+          Revolear
+        </span>
       </div>
 
-      {/* Center Search Bar */}
-      <div className="w-[328px] h-[30px] mx-8 min-w-md ">
-        <input
-          type="text"
-          placeholder="Buscar"
-          className="w-full max-w-xl px-4 py-2 rounded-full bg-[#C8E6E6] text-black placeholder:text-gray-700"
-        />
-      </div>
-
-      {/* Right Icons */}
-      <div className="flex items-center gap-6">
+      {/* Right Section - Icons */}
+      <div className="flex items-center gap-6 ml-auto">
         <FiSearch className="text-xl text-black cursor-pointer" />
-        <div className="relative">
-          <IoMdNotifications className="text-2xl text-yellow-400 cursor-pointer" />
+        <div className="relative cursor-pointer">
+          <IoMdNotifications className="text-2xl text-yellow-400" />
           <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full" />
         </div>
+        <button onClick={onToggleSidebar} className="text-2xl text-black">
+          <FiMenu />
+        </button>
       </div>
     </div>
   );

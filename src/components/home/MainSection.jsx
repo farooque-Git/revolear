@@ -28,31 +28,34 @@ const MainSection = () => {
         </h1>
       </div>
 
-      {/* Block 2: Secure */}
-      <div className="">
-        {/* Image */}
-        <img src={home1} alt="home" className="w-full" />
+      {/* Block 2: Image */}
+      <img src={home1} alt="home" className="w-full" />
 
-        {/* Header */}
-        <h1 className="text-[40px] font-bold mt-4">
-          Descubre, Vende y Promociona con Facilidad
-        </h1>
+      {/* Block 3: 50-50 Split */}
+      <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-32 mt-8">
+        {/* Left side (Heading) */}
+        <div className="w-full md:w-1/2 mb-4 md:mb-0">
+          <h1 className="text-[32px] md:text-[40px] font-bold">
+            Descubre, Vende y Promociona con Facilidad
+          </h1>
+        </div>
 
-        {/* Paragraph */}
-        <p className="text-lg mt-4">
-          REVOLEAR® le ofrece un acceso sin fisuras para buscar, publicar y
-          examinar promociones destacadas. Disfrute de una interfaz fácil de
-          usar diseñada para mejorar su experiencia de compra y venta.
-        </p>
+        {/* Right side (Paragraph and Buttons) */}
+        <div className="w-full md:w-1/2">
+          <p className="text-lg mb-6">
+            REVOLEAR® le ofrece un acceso sin fisuras para buscar, publicar y
+            examinar promociones destacadas. Disfrute de una interfaz fácil de
+            usar diseñada para mejorar su experiencia de compra y venta.
+          </p>
 
-        {/* Buttons */}
-        <div className="flex gap-4 mt-8">
-          <button className="px-6 py-3 bg-blue-500 text-white rounded-md text-lg">
-            Button 1
-          </button>
-          <button className="px-6 py-3 bg-green-500 text-white rounded-md text-lg">
-            Button 2
-          </button>
+          <div className="flex gap-4">
+            <button className="px-6 py-3 bg-blue-500 text-white rounded-md text-lg">
+              Button 1
+            </button>
+            <button className="px-6 py-3 bg-green-500 text-white rounded-md text-lg">
+              Button 2
+            </button>
+          </div>
         </div>
       </div>
     </section>

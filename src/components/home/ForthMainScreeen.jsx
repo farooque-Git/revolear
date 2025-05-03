@@ -15,8 +15,9 @@ const ForthMainScreeen = () => {
         }}
       >
         {/* Aspect Ratio Spacer */}
-        <div className="pt-[56.25%] md:pt-[40%]"></div>{" "}
+        <div className="pt-[56.25%] md:pt-[40%]"></div>
         {/* Aspect ratio spacer */}
+
         {/* Overlay Content */}
         <div className="absolute inset-0 bg-black/30 flex items-center px-6 md:px-20 py-12">
           <div className="max-w-xl space-y-4 px-4 md:px-0">
@@ -90,12 +91,71 @@ const ForthMainScreeen = () => {
         </div>
       </div>
 
-      {/* Block 7: Image */}
-      <img
-        src={home5}
-        alt="Descripción de la imagen"
-        className="w-full h-auto rounded-lg mt-12"
-      />
+      {/* Block 7: Image with Content Layout */}
+      <div className="w-full px-4 md:px-20 py-12 bg-white text-black">
+        <div className="max-w-7xl mx-auto">
+          {/* Grid for 1/3 and 2/3 layout */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* 1/3 section for Image */}
+            <div className="md:col-span-1 flex justify-center">
+              <img
+                src={home5}
+                alt="Descripción de la imagen"
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+
+            {/* 2/3 section for Content */}
+            <div className="md:col-span-2">
+              {/* Heading */}
+              <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+                Libere su potencial con <br className="hidden md:block" />
+                REVOLEAR
+              </h2>
+
+              {/* Subtext */}
+              <p className="text-base md:text-lg text-gray-700 mb-8 max-w-3xl">
+                Revolviendo revoluciona la forma en que los usuarios y
+                comerciantes se conectan. Experimente transacciones fluidas y
+                promociones específicas como nunca antes.
+              </p>
+
+              {/* Columns for Users and Merchants */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Para usuarios */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">Para usuarios</h3>
+                  <p className="text-gray-700">
+                    Compre, venda fácilmente y promocione herramientas
+                    intuitivas disponibles a su alcance.
+                  </p>
+                </div>
+
+                {/* Para comerciantes */}
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">
+                    Para comerciantes
+                  </h3>
+                  <p className="text-gray-700">
+                    Aumente las ventas con tiendas personalizadas y potentes
+                    funciones publicitarias adaptadas a su negocio.
+                  </p>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="mt-8 flex flex-wrap gap-4">
+                <button className="border border-pink-500 text-pink-600 px-5 py-2 rounded-full text-sm hover:bg-pink-50">
+                  Más Información
+                </button>
+                <button className="text-sm text-gray-700 hover:underline">
+                  Registrarse
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
