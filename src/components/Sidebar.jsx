@@ -37,7 +37,7 @@ const Sidebar = ({ onClose }) => {
   ];
 
   return (
-    <div className="w-72 bg-white h-screen shadow-md px-6 py-4 absolute left-0 top-0 z-50">
+    <div className="w-72 bg-white h-screen shadow-md px-6 py-4 absolute right-0 top-0 z-50">
       <div className="flex justify-between items-center mb-6">
         <div className="flex items-center gap-2">
           <img src={logo} alt="Revolear" className="h-8 w-8" />
