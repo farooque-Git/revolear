@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 
 import { useState } from "react";
 import Home from "./components/Home";
+import Footer from "./pages/Footer";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -27,7 +28,7 @@ function App() {
 
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }
