@@ -7,6 +7,9 @@ export default {
         primaryGradientStart: "#FB658D", // purple-500
         primaryGradientEnd: "#439999", // blue-300
       },
+      fontFamily: {
+        gloock: ["Gloock", "serif"],
+      },
     },
   },
   plugins: [],

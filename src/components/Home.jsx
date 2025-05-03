@@ -4,6 +4,7 @@ import SecondMainScreen from "./home/SecondMainScreen";
 import ThirdMainScreen from "./home/ThirdMainScreen";
 import ForthMainScreeen from "./home/ForthMainScreeen";
 import FifthMainScreen from "./home/FifthMainScreen";
+import SixthMainScreen from "./home/SixthMainScreen";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <ThirdMainScreen />
       <ForthMainScreeen />
       <FifthMainScreen />
+      <SixthMainScreen />
     </div>
   );
 };
