@@ -26,11 +26,11 @@ const FifthMainScreen = () => {
   ];
   return (
     <div>
-      {/* block 6 */}
-      <div className="w-full px-4 md:px-20 py-12 bg-white text-black">
+      {/* Block 6 */}
+      <div className="w-full px-4 md:px-8 py-12 bg-white text-black">
         <div className="max-w-6xl mx-auto text-center">
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-semibold mb-10">
+          <h2 className="text-3xl sm:text-4xl font-semibold mb-10">
             Descubra lo fácil que es comprar <br className="hidden md:block" />y
             vender con{" "}
             <span className="italic">
@@ -40,7 +40,7 @@ const FifthMainScreen = () => {
           </h2>
 
           {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {cards.map((card, idx) => (
               <div
                 key={idx}
@@ -61,9 +61,9 @@ const FifthMainScreen = () => {
         </div>
       </div>
 
-      {/* Block 6 */}
-      <div className="bg-white min-h-screen w-[658px] px-[10px] py-8 mx-auto font-sans text-gray-900">
-        <h2 className="text-3xl font-bold leading-tight">
+      {/* Block 6 - Metrics */}
+      <div className="bg-white min-h-screen w-full px-4 sm:px-8 py-8 mx-auto font-sans text-gray-900">
+        <h2 className="text-3xl sm:text-4xl font-bold leading-tight">
           Métricas clave del <br />
           rendimiento de nuestra <br />
           aplicación
@@ -74,7 +74,7 @@ const FifthMainScreen = () => {
           Con miles de transacciones realizadas, la <br />
           satisfacción de los usuarios sigue siendo alta.
         </p>
-        <div className="mt-6 flex justify-between">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
             <p className="text-2xl font-semibold">85%</p>
             <p className="text-sm text-gray-600">
@@ -94,14 +94,14 @@ const FifthMainScreen = () => {
         </div>
       </div>
 
-      {/* block 7 */}
+      {/* Block 7 - Image */}
       <img
         src={home6}
         alt="Descripción de la imagen"
         className="w-full h-auto rounded-lg"
       />
 
-      {/* BNlock 8 */}
+      {/* Block 8 - Review & CTA */}
       <div className="min-h-screen bg-white flex flex-col justify-between font-sans text-black">
         {/* Top Section: Review */}
         <div className="text-center p-6">
@@ -124,15 +124,15 @@ const FifthMainScreen = () => {
             className="w-full h-auto object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center p-4 text-white">
-            <h3 className="text-xl font-semibold">
+            <h3 className="text-xl sm:text-2xl font-semibold">
               Únase hoy mismo a la comunidad REVOLEAR®
             </h3>
-            <p className="text-sm mt-2">
+            <p className="text-sm sm:text-base mt-2">
               Experimente la compraventa sin <br />
               complicaciones con nuestra intuitiva <br />
               aplicación. Descárguela ahora para empezar.
             </p>
-            <div className="mt-4 flex gap-2">
+            <div className="mt-4 flex flex-wrap gap-2 justify-center sm:justify-start">
               <button className="bg-pink-500 text-white px-4 py-1 rounded">
                 Comenzar
               </button>

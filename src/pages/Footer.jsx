@@ -17,7 +17,7 @@ const footerItems = [
 const Footer = () => {
   return (
     <div className="w-full border-t border-gray-300 bg-gray-100 text-sm fixed bottom-0 left-0 z-50">
-      <div className="flex justify-around items-center py-2 px-2 sm:px-4">
+      <div className="flex justify-around items-center py-2 px-2 sm:px-4 md:px-8">
         {footerItems.map((item, index) => (
           <div
             key={index}
@@ -26,7 +26,7 @@ const Footer = () => {
             }`}
           >
             <img src={item.src} alt={item.label} className="w-6 h-6 mb-1" />
-            <span className="text-[11px] sm:text-xs text-center truncate w-full">
+            <span className="text-[11px] sm:text-xs md:text-sm text-center truncate w-full">
               {item.label}
             </span>
           </div>
