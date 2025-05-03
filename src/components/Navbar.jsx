@@ -16,11 +16,11 @@ const Navbar = ({ onToggleSidebar }) => {
 
       {/* Right Section - Icons */}
       <div className="flex items-center gap-6 ml-auto">
-        <FiSearch className="text-xl text-black cursor-pointer" />
+        {/* <FiSearch className="text-xl text-black cursor-pointer" />
         <div className="relative cursor-pointer">
           <IoMdNotifications className="text-2xl text-yellow-400" />
           <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full" />
-        </div>
+        </div> */}
         <button onClick={onToggleSidebar} className="text-2xl text-black">
           <FiMenu />
         </button>

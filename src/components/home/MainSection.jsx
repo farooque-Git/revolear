@@ -1,35 +1,12 @@
 import React from "react";
-import arrow from "../../assets/arrow.png";
-import { useNavigate } from "react-router-dom";
+
 import home1 from "../../assets/home1.png";
 import { GradientButton } from "../button/Button";
 import { GradientOutlineButton } from "./../button/Button";
 
 const MainSection = () => {
-  const navigate = useNavigate(); // Initialize navigate
-
-  const handleGoBack = () => {
-    navigate(-1); // Navigate back to the previous page
-  };
-
   return (
     <section>
-      {/* Block 1: Secure */}
-      <div className="h-[120px] py-8 bg-[#EAEAEA] rounded-lg shadow-md flex items-center justify-between px-4">
-        {/* Arrow on the left side */}
-        <img
-          src={arrow}
-          alt="arrow"
-          className="max-w-[40px] max-h-[40px] cursor-pointer"
-          onClick={handleGoBack} // Trigger go back function when clicked
-        />
-
-        {/* Hogar text centered */}
-        <h1 className="text-center text-3xl font-semibold text-gray-800 tracking-wide flex-1">
-          Hogar
-        </h1>
-      </div>
-
       {/* Block 2: Image */}
       <img src={home1} alt="home" className="w-full" />
 
