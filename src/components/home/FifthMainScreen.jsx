@@ -98,7 +98,7 @@ const FifthMainScreen = () => {
       <img
         src={home6}
         alt="Descripción de la imagen"
-        className="w-full h-auto rounded-lg"
+        className="w-full rounded-lg"
       />
 
       {/* Block 8 - Review & CTA */}
@@ -121,7 +121,7 @@ const FifthMainScreen = () => {
           <img
             src={home7} // Replace with actual image
             alt="Call to Action"
-            className="w-full h-auto object-cover"
+            className="w-full h-[350px] sm:h-[550px] md:h-[500px] object-cover" // Adjust height for different screen sizes
           />
           <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center p-4 text-white">
             <h3 className="text-xl sm:text-2xl font-semibold">
