@@ -10,6 +10,7 @@ import Footer from "./pages/Footer";
 import Aboutus from "./pages/Aboutus";
 import Features from "./pages/Features";
 import Pricing from "./pages/Pricing";
+import Blog from "./pages/Blog";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -28,6 +29,7 @@ function App() {
         <Route path="/about" element={<Aboutus />} />
         <Route path="/features" element={<Features />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/blog" element={<Blog />} />
 
         {/* <Route path="/contact" element={<Contact />} /> */}
 
