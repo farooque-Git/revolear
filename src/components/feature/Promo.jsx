@@ -9,11 +9,10 @@ const Promo = () => {
       style={{
         backgroundImage: `url(${promoimg})`,
         height: "2164px",
-        width: "full",
       }}
     >
-      {/* Top Section */}
-      <div className="absolute top-[100px] left-[150px] w-[600px] text-center">
+      {/* Top Section - Centered */}
+      <div className="absolute top-[100px] left-1/2 transform -translate-x-1/2 w-[600px] text-center">
         <h1 className="text-3xl font-semibold mb-4">
           Comunicación fluida para compradores y vendedores
         </h1>
@@ -29,11 +28,11 @@ const Promo = () => {
       <img
         src={curvearrow}
         alt="Arrow"
-        className="absolute top-[350px] left-[400px] rotate-[15deg] w-[200px]"
+        className="absolute top-[240px] left-[400px] rotate-[15deg] w-[500px]"
       />
 
-      {/* Middle Section */}
-      <div className="absolute top-[500px] left-[120px] w-[700px] bg-black bg-opacity-40 p-6 rounded-lg">
+      {/* Middle Section - Left with Padding */}
+      <div className="absolute top-[500px] left-[80px] w-[700px] bg-black bg-opacity-40 p-6 rounded-lg">
         <h2 className="text-2xl font-bold mb-2">
           Potencie sus transacciones con nuestro sistema de reseñas y
           valoraciones
@@ -51,25 +50,36 @@ const Promo = () => {
           usuario.
         </div>
       </div>
+      <img
+        src={curvearrow}
+        alt="Arrow"
+        className="absolute top-[850px] left-[650px] rotate-[-5deg] w-[500px] transform -scale-x-100"
+      />
+
+      {/* Bottom Section - Right with ul floated to left */}
+      <div className="absolute top-[1300px] right-[100px] w-[600px]">
+        <div className="text-right">
+          <h2 className="text-2xl font-bold mb-2">
+            Libere su potencial comercial con REVOLARE®
+          </h2>
+          <p className="mb-4">
+            Con REVOLARE, los comerciantes pueden crear tiendas personalizadas
+            con facilidad. Nuestra plataforma optimiza cada paso de la
+            experiencia comercial, desde la creación del perfil hasta la
+            atención al cliente.
+          </p>
+        </div>
+      </div>
 
       {/* Arrow 2 */}
       <img
         src={curvearrow}
         alt="Arrow"
-        className="absolute top-[1050px] left-[600px] rotate-[-20deg] w-[100px]"
+        className="absolute top-[1550px] left-[400px] rotate-[-20deg] w-[100px]"
       />
 
-      {/* Bottom Section */}
-      <div className="absolute top-[1300px] left-[150px] w-[600px]">
-        <h2 className="text-2xl font-bold mb-2">
-          Libere su potencial comercial con REVOLARE®
-        </h2>
-        <p className="mb-4">
-          Con REVOLARE, los comerciantes pueden crear tiendas personalizadas con
-          facilidad. Nuestra plataforma optimiza cada paso de la experiencia
-          comercial, desde la creación del perfil hasta la atención al cliente.
-        </p>
-        <ul className="list-disc list-inside space-y-1 text-base">
+      <div className="absolute top-[1650px] left-[80px] w-[700px] bg-opacity-40 p-6 rounded-lg">
+        <ul className=" list-inside space-y-1 text-base text-left">
           <li>Crea tu tienda personalizada sin esfuerzo</li>
           <li>Experiencia sin fricciones en la venta o la compra</li>
           <li>Procesos de pago seguros para mayor tranquilidad</li>
