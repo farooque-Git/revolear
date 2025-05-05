@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import ProjectMainScreen from "./../components/project/ProjectMainScreeen";
+import ProjectSecondScreen from "./../components/project/ProjectSecondSecreen";
+import ProjectTimeline from "../components/project/ProjectTimeline";
 
 const Project = () => {
   return (
-    <div>Project</div>
-  )
-}
+    <div>
+      <ProjectMainScreen />
+      <ProjectSecondScreen />
+      <ProjectTimeline />
+    </div>
+  );
+};
 
-export default Project
+export default Project;

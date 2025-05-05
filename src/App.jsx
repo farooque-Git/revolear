@@ -12,6 +12,7 @@ import Features from "./pages/Features";
 import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
 import Products from "./pages/Products";
+import Project from "./pages/Project";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -32,6 +33,7 @@ function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/projects" element={<Project />} />
 
         {/* <Route path="/contact" element={<Contact />} /> */}
 
