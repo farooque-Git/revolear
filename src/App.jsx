@@ -11,12 +11,13 @@ import Aboutus from "./pages/Aboutus";
 import Features from "./pages/Features";
 import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
+import Products from "./pages/Products";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleSidebarClose = () => {
-    setSidebarOpen(false); // Close the sidebar
+    setSidebarOpen(false);
   };
 
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/features" element={<Features />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/products" element={<Products />} />
 
         {/* <Route path="/contact" element={<Contact />} /> */}
 
