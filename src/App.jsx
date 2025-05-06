@@ -15,6 +15,7 @@ import Products from "./pages/Products";
 import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 import MyPost from "./pages/MyPost";
+import Profile from "./Profile";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -39,6 +40,7 @@ function App() {
 
         <Route path="/contact" element={<Contact />} />
         <Route path="/posts" element={<MyPost />} />
+        <Route path="/profile" element={<Profile />} />
 
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
