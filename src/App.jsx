@@ -13,7 +13,8 @@ import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
 import Products from "./pages/Products";
 import Project from "./pages/Project";
-import Contact from './pages/Contact';
+import Contact from "./pages/Contact";
+import MyPost from "./pages/MyPost";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -37,6 +38,7 @@ function App() {
         <Route path="/projects" element={<Project />} />
 
         <Route path="/contact" element={<Contact />} />
+        <Route path="/posts" element={<MyPost />} />
 
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>

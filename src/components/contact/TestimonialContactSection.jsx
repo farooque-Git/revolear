@@ -18,10 +18,7 @@ const testimonials = [
 
 export default function TestimonialContactSection() {
   return (
-    <div
-      className="bg-gray-100 px-32
-     py-12 text-black"
-    >
+    <div className="bg-gray-100 px-4 md:px-32 py-12 text-black">
       {/* Contact Prompt */}
       <div className="mb-12">
         <h2 className="text-xl font-semibold">¿Aún tienes preguntas?</h2>
@@ -40,7 +37,7 @@ export default function TestimonialContactSection() {
           ¡Escucha lo que nuestros usuarios tienen que decir!
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((t, i) => (
             <div key={i} className="bg-white p-6 rounded-lg shadow-sm">
               <div className="flex items-center gap-1 mb-2">
