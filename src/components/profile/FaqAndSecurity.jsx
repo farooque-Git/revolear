@@ -30,7 +30,7 @@ const faqs = [
   },
 ];
 
-export default function FaqAndSecurity() {
+export function FaqAndSecurity() {
   const [openIndex, setOpenIndex] = useState(-1);
 
   const toggleFaq = (index) => {
@@ -80,7 +80,7 @@ export default function FaqAndSecurity() {
       </section>
 
       {/* Footer Section */}
-      <section className=" py-8 px-6 rounded-lg space-y-4 mx-auto">
+      {/* <section className=" py-8 px-6 rounded-lg space-y-4 mx-auto">
         <h3 className="text-xl font-semibold">
           Asegure la configuración de su cuenta
         </h3>
@@ -91,7 +91,23 @@ export default function FaqAndSecurity() {
           <GradientButton>Ahorrar</GradientButton>
           <GradientOutlineButton>Verificar</GradientOutlineButton>
         </div>
-      </section>
+      </section> */}
     </div>
+  );
+}
+export function FaqAndSecurityFooter() {
+  return (
+    <section className=" py-8 px-6 rounded-lg space-y-4 mx-auto">
+      <h3 className="text-xl font-semibold">
+        Asegure la configuración de su cuenta
+      </h3>
+      <p className="text-sm text-gray-600">
+        No olvides guardar los cambios por seguridad.
+      </p>
+      <div className="flex  gap-4">
+        <GradientButton>Ahorrar</GradientButton>
+        <GradientOutlineButton>Verificar</GradientOutlineButton>
+      </div>
+    </section>
   );
 }

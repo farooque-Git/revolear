@@ -15,8 +15,9 @@ import Products from "./pages/Products";
 import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 import MyPost from "./pages/MyPost";
-import Profile from "./Profile";
+
 import Contract from "./pages/Contract";
+import Profile from "./pages/profile";
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);

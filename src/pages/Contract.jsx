@@ -1,12 +1,17 @@
 import React from "react";
 import P2PSection from "./../components/contract/P2PSection";
-import PricingPlans from "./../components/pricing/PricingPlans";
+
+import ContractPricingPlans from "../components/contract/PricingPlans";
+import { FaqAndSecurity } from "../components/profile/FaqAndSecurity";
+import ContractFooter from "./../components/contract/ContractFooter";
 
 const Contract = () => {
   return (
     <div>
       <P2PSection />
-      <PricingPlans />
+      <ContractPricingPlans />
+      <FaqAndSecurity />
+      <ContractFooter />
     </div>
   );
 };
