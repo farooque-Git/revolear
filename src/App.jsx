@@ -20,9 +20,10 @@ import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 import MyPost from "./pages/MyPost";
 import Contract from "./pages/Contract";
-import Profile from "./pages/profile";
+
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Profile from "./pages/Profile";
 
 function LayoutWrapper() {
   const location = useLocation();
