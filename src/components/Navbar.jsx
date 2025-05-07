@@ -2,8 +2,7 @@ import React from "react";
 import { FiMenu } from "react-icons/fi";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
-import NotificationDropdown from './notification/NotificationDropdown ';
-
+import NotificationDropdown from "./notification/NotificationDropdown ";
 
 const Navbar = ({ onToggleSidebar }) => {
   return (

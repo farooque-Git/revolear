@@ -7,12 +7,24 @@ import {
   FiFolder,
   FiFileText,
   FiInfo,
-  FiX, // Close icon
+  FiX,
 } from "react-icons/fi";
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../redux/auth/authSlice";
 
 const Sidebar = ({ onClose }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/login");
+    if (onClose) onClose(); // close sidebar after logout
+  };
+
   const sidebarSections = [
     {
       items: [
@@ -37,7 +49,21 @@ const Sidebar = ({ onClose }) => {
         { label: "Contacta con nosotros", to: "/contact" },
         { label: "Perfil y configuración", to: "/profile" },
         { label: "Contratos P2P", to: "/contracts" },
-        { label: "Cerrar sesión", isBold: true, to: "/logout" },
+        ...(isAuthenticated
+          ? [
+              {
+                label: "Cerrar sesión",
+                isBold: true,
+                onClick: handleLogout,
+              },
+            ]
+          : [
+              {
+                label: "Iniciar sesión",
+                isBold: true,
+                to: "/login",
+              },
+            ]),
       ],
     },
   ];
@@ -62,20 +88,33 @@ const Sidebar = ({ onClose }) => {
           <ul className="space-y-4">
             {section.items.map((item, idx) => (
               <li key={idx}>
-                <Link
-                  to={item.to || "#"}
-                  className="flex items-center gap-3 text-sm cursor-pointer hover:text-black text-gray-700"
-                >
-                  {item.icon && <span className="text-lg">{item.icon}</span>}
-                  <span className={`${item.isBold ? "font-bold" : ""}`}>
-                    {item.label}
-                  </span>
-                  {item.subLabel && (
-                    <span className="ml-auto text-xs bg-white border px-2 py-1 rounded shadow">
-                      {item.subLabel}
-                    </span>
-                  )}
-                </Link>
+                {item.onClick ? (
+                  <button
+                    onClick={item.onClick}
+                    className={`flex w-full items-center gap-3 text-sm cursor-pointer hover:text-black text-gray-700 ${
+                      item.isBold ? "font-bold" : ""
+                    }`}
+                  >
+                    {item.icon && <span className="text-lg">{item.icon}</span>}
+                    <span>{item.label}</span>
+                  </button>
+                ) : (
+                  <Link
+                    to={item.to || "#"}
+                    onClick={onClose}
+                    className={`flex items-center gap-3 text-sm cursor-pointer hover:text-black text-gray-700 ${
+                      item.isBold ? "font-bold" : ""
+                    }`}
+                  >
+                    {item.icon && <span className="text-lg">{item.icon}</span>}
+                    <span>{item.label}</span>
+                    {item.subLabel && (
+                      <span className="ml-auto text-xs bg-white border px-2 py-1 rounded shadow">
+                        {item.subLabel}
+                      </span>
+                    )}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

@@ -1,12 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { useState } from "react";
 
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
-
-import { useState } from "react";
-import Home from "./components/Home";
 import Footer from "./pages/Footer";
+
+import Home from "./components/Home";
 import Aboutus from "./pages/Aboutus";
 import Features from "./pages/Features";
 import Pricing from "./pages/Pricing";
@@ -15,22 +19,29 @@ import Products from "./pages/Products";
 import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 import MyPost from "./pages/MyPost";
-
 import Contract from "./pages/Contract";
 import Profile from "./pages/profile";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
-function App() {
+function LayoutWrapper() {
+  const location = useLocation();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const handleSidebarClose = () => {
-    setSidebarOpen(false);
-  };
+  // Define routes where Navbar & Footer should be hidden
+  const hiddenLayoutRoutes = ["/login", "/register"];
+
+  const hideLayout = hiddenLayoutRoutes.includes(location.pathname);
 
   return (
-    <Router>
-      <Navbar onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
-      {sidebarOpen && <Sidebar onClose={handleSidebarClose} />}{" "}
-      {/* Pass the onClose prop */}
+    <>
+      {!hideLayout && (
+        <>
+          <Navbar onToggleSidebar={() => setSidebarOpen(!sidebarOpen)} />
+          {sidebarOpen && <Sidebar onClose={() => setSidebarOpen(false)} />}
+        </>
+      )}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Aboutus />} />
@@ -39,15 +50,23 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/products" element={<Products />} />
         <Route path="/projects" element={<Project />} />
-
         <Route path="/contact" element={<Contact />} />
         <Route path="/posts" element={<MyPost />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/contracts" element={<Contract />} />
-
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
-      <Footer />
+
+      {!hideLayout && <Footer />}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <LayoutWrapper />
     </Router>
   );
 }
