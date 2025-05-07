@@ -5,11 +5,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useState } from "react";
-
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Footer from "./pages/Footer";
-
 import Home from "./components/Home";
 import Aboutus from "./pages/Aboutus";
 import Features from "./pages/Features";
@@ -20,7 +18,6 @@ import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 import MyPost from "./pages/MyPost";
 import Contract from "./pages/Contract";
-
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
