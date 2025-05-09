@@ -8,15 +8,16 @@ const Promo = () => {
       className="relative w-full bg-cover bg-center text-white"
       style={{
         backgroundImage: `url(${promoimg})`,
-        height: "2164px",
+        height: "auto",
+        minHeight: "2164px",
       }}
     >
-      {/* Top Section - Centered */}
-      <div className="absolute top-[100px] left-1/2 transform -translate-x-1/2 w-[600px] text-center">
-        <h1 className="text-3xl font-semibold mb-4">
+      {/* Top Section */}
+      <div className="absolute top-[80px] left-1/2 transform -translate-x-1/2 w-[90%] max-w-[600px] text-center px-4">
+        <h1 className="text-2xl md:text-3xl font-semibold mb-4">
           Comunicación fluida para compradores y vendedores
         </h1>
-        <p className="text-lg">
+        <p className="text-base md:text-lg">
           Nuestra función de chat integrada permite una comunicación simple y en
           tiempo real entre compradores y vendedores, acelerando el cierre de
           operaciones y mejorando la experiencia de compra con conversaciones
@@ -28,12 +29,12 @@ const Promo = () => {
       <img
         src={curvearrow}
         alt="Arrow"
-        className="absolute top-[240px] left-[400px] rotate-[15deg] w-[500px]"
+        className="hidden md:block absolute top-[240px] left-[400px] rotate-[15deg] w-[500px]"
       />
 
-      {/* Middle Section - Left with Padding */}
-      <div className="absolute top-[500px] left-[80px] w-[700px] bg-black bg-opacity-40 p-6 rounded-lg">
-        <h2 className="text-2xl font-bold mb-2">
+      {/* Middle Section */}
+      <div className="absolute top-[500px] left-1/2 transform -translate-x-1/2 md:translate-x-0 md:left-[80px] w-[90%] max-w-[700px] bg-black bg-opacity-40 p-6 rounded-lg">
+        <h2 className="text-xl md:text-2xl font-bold mb-2">
           Potencie sus transacciones con nuestro sistema de reseñas y
           valoraciones
         </h2>
@@ -50,16 +51,18 @@ const Promo = () => {
           usuario.
         </div>
       </div>
+
+      {/* Arrow 2 */}
       <img
         src={curvearrow}
         alt="Arrow"
-        className="absolute top-[850px] left-[650px] rotate-[-5deg] w-[500px] transform -scale-x-100"
+        className="hidden md:block absolute top-[850px] left-[650px] rotate-[-5deg] w-[500px] transform -scale-x-100"
       />
 
-      {/* Bottom Section - Right with ul floated to left */}
-      <div className="absolute top-[1300px] right-[100px] w-[600px]">
-        <div className="text-right">
-          <h2 className="text-2xl font-bold mb-2">
+      {/* Bottom Section - Right aligned */}
+      <div className="absolute top-[1300px] left-1/2 transform -translate-x-1/2 md:transform-none md:left-auto md:right-[100px] w-[90%] max-w-[600px] text-right md:text-right text-left px-4">
+        <div>
+          <h2 className="text-xl md:text-2xl font-bold mb-2">
             Libere su potencial comercial con REVOLARE®
           </h2>
           <p className="mb-4">
@@ -71,15 +74,16 @@ const Promo = () => {
         </div>
       </div>
 
-      {/* Arrow 2 */}
+      {/* Arrow 3 */}
       <img
         src={curvearrow}
         alt="Arrow"
-        className="absolute top-[1550px] left-[400px] rotate-[-20deg] w-[100px]"
+        className="hidden md:block absolute top-[1550px] left-[400px] rotate-[-20deg] w-[100px]"
       />
 
-      <div className="absolute top-[1650px] left-[80px] w-[700px] bg-opacity-40 p-6 rounded-lg">
-        <ul className=" list-inside space-y-1 text-base text-left">
+      {/* Final List Section */}
+      <div className="absolute top-[1650px] left-1/2 transform -translate-x-1/2 md:translate-x-0 md:left-[80px] w-[90%] max-w-[700px] bg-opacity-40 p-6 rounded-lg">
+        <ul className="list-inside space-y-1 text-base text-left">
           <li>Crea tu tienda personalizada sin esfuerzo</li>
           <li>Experiencia sin fricciones en la venta o la compra</li>
           <li>Procesos de pago seguros para mayor tranquilidad</li>
